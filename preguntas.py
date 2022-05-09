@@ -21,11 +21,11 @@ def pregunta_01():
     # Lea el archivo `amazon_cells_labelled.tsv` y cree un DataFrame usando pandas.
     # Etiquete la primera columna como `msg` y la segunda como `lbl`. Esta función
     # retorna el dataframe con las dos columnas.
-    df = ____(
-        ____,
-        sep=____,
-        header=____,
-        names=____,
+    df = pd.read_csv(
+        "amazon_cells_labelled.tsv",
+        sep="\t",
+        header=None,
+        names=["msg","lbl"],
     )
 
     # Separe los grupos de mensajes etiquetados y no etiquetados.
