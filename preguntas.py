@@ -29,14 +29,14 @@ def pregunta_01():
     )
 
     # Separe los grupos de mensajes etiquetados y no etiquetados.
-    df_tagged = ____[____["____"].____()]
-    df_untagged = ____[____["____"].____()]
+    df_tagged = df.loc[df["lbl"].notna()]
+    df_untagged = df.loc[df["lbl"].isna()]
 
-    x_tagged = ____["____"]
-    y_tagged = ____["____"]
+    x_tagged = df_tagged["msg"]
+    y_tagged = df_tagged["lbl"]
 
-    x_untagged = ____["____"]
-    y_untagged = ____["____"]
+    x_untagged = df_untagged["msg"]
+    y_untagged = df_untagged["lbl"]
 
     # Retorne los grupos de mensajes
     return x_tagged, y_tagged, x_untagged, y_untagged
